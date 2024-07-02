@@ -4,42 +4,40 @@ using Character;
 using GeneralInput;
 using UI;
 using UnityEngine;
+using Views;
 using Zenject;
-using Object = UnityEngine.Object;
 
 public class AnimalMiniGameController: IInitializable, IDisposable
 {
     private PlayerCharacter _player;
 
-    private Dictionary<GameObject, IFollower> _animalsFollowingCharacter =
-        new Dictionary<GameObject, IFollower>();
+    private Dictionary<GameObject, IFollower> _animalsFollowingCharacter = new Dictionary<GameObject, IFollower>();
     private HashSet<IFollower> _countedFollowers = new HashSet<IFollower>();
-        
-    // And also we need to implement some kind of factory pattern to create entities
-    // and pool pattern to reuse entities
+
     private readonly IInputSystem _inputSystem;
     private readonly HudScoreCount _hudScoreCount;
     private readonly MiniGameSettings _miniGameSettings;
+    private readonly ViewPool _viewPool;
 
     public AnimalMiniGameController(
-        IInputSystem inputSystem,
         HudScoreCount hudScoreCount, 
-        MiniGameSettings miniGameSettings)
+        MiniGameSettings miniGameSettings, 
+        ViewPool viewPool)
     {
-        _inputSystem = inputSystem;
         _hudScoreCount = hudScoreCount;
         _miniGameSettings = miniGameSettings;
+        _viewPool = viewPool;
         _hudScoreCount.SetScore(0);
 
-        _player = Object.Instantiate(miniGameSettings.playerCharacterPrefab);
-        _player.Initialize(_inputSystem);
+        _player = _viewPool.Pop(miniGameSettings.playerCharacterPrefab.gameObject, Vector3.zero, Quaternion.identity, null).GetComponent<PlayerCharacter>();
             
         for (int i = 0; i < miniGameSettings.animalCount; i++)
         {
-            var animalFollowingCharacter = Object.Instantiate(
-                miniGameSettings.animalFollowingCharacterPrefab,
+            var animalFollowingCharacter = _viewPool.Pop(
+                miniGameSettings.animalFollowingCharacterPrefab.gameObject,
                 miniGameSettings.animalPatrolZone.GetRandomPoint(), 
-                Quaternion.identity);
+                Quaternion.identity,
+                null).GetComponent<AnimalFollowingCharacter>();
                 
             animalFollowingCharacter.StartPatrolZone(miniGameSettings.animalPatrolZone);
             _animalsFollowingCharacter.Add(animalFollowingCharacter.gameObject,animalFollowingCharacter);
