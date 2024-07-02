@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace DefaultNamespace.UI
+namespace UI
 {
     public class HudScoreCount : MonoBehaviour
     {

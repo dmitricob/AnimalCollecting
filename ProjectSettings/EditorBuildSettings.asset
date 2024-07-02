@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/AnimalFieldScene.unity
+    guid: 333ba1731101e0b4398d7cedc3b82746
   m_configObjects: {}

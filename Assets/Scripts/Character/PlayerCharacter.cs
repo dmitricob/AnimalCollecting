@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using Character.Base;
 using GeneralInput;
 using UnityEngine;
+using Zenject;
 
 namespace Character
 {
@@ -14,23 +15,32 @@ namespace Character
         private Camera _mainCamera;
         private IInputSystem _inputSystem;
 
+        [Inject]
         public void Initialize(IInputSystem inputSystem)
         {
             _inputSystem = inputSystem;
+            _mainCamera = Camera.main;
         }
         
         private void OnEnable()
         {
-            _mainCamera = Camera.main;
-            _startFollowingTrigger.Entered += OnEnteredFollowZone;
+            Subscribe();
         }
         private void OnDisable()
         {
-            _startFollowingTrigger.Entered -= OnEnteredFollowZone;
+            Unsubscribe();
         }
 
+        private void Subscribe()
+        {
+            _startFollowingTrigger.Entered += OnEnteredFollowZone;
+        }
         
-        public void StartFollowTarget(Transform target){}
+        private void Unsubscribe()
+        {
+            _startFollowingTrigger.Entered -= OnEnteredFollowZone;
+        }
+        
         
         private void OnEnteredFollowZone(GameObject obj)
         {
