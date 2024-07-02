@@ -45,7 +45,7 @@ namespace Character
         private void OnEnteredFollowZone(GameObject obj)
         {
             if(_followers.Count >= _maxAmmountOfFollowers 
-               || obj.TryGetComponent(out IFollower follower) == false // could be a problem in huge amount of objects
+               || obj.TryGetComponent(out IFollower follower) == false // could be a problem in huge amount of objects need to ref
                || _followers.Contains(follower))
                 return;
             

@@ -2,6 +2,7 @@ using System;
 using GeneralInput;
 using UI;
 using UnityEngine;
+using Views;
 using Zenject;
 
 namespace DI
@@ -16,6 +17,10 @@ namespace DI
             Container.Bind(typeof(IInputSystem)).To<UnityInput>().AsSingle();
             Container.Bind(typeof(IInitializable),typeof(IDisposable), typeof(AnimalMiniGameController)).To<AnimalMiniGameController>().AsSingle().WithArguments(_miniGameSettings).NonLazy();
             Container.Bind<HudScoreCount>().FromInstance(_hudScoreCount).AsSingle();
+            Container.Bind<ViewPool>().AsSingle().WithArguments(Container);
+            CoroutineHolder coroutineHolder = new GameObject("CoroutineHolder").AddComponent<CoroutineHolder>();
+            Container.Bind<CoroutineHolder>().FromInstance(coroutineHolder).AsSingle().WithArguments(Container);
+            
         }
     }
 }

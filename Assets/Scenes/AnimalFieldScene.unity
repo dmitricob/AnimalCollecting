@@ -291,7 +291,11 @@ MonoBehaviour:
   _miniGameSettings:
     animalPatrolZone: {fileID: 1800163937}
     triggerEnterFiltered: {fileID: 243357062}
-    animalCount: 7
+    startAnimalCount: 2
+    minSpawnTime: 2
+    maxSpawnTime: 10
+    minAdditionAnimalCount: 1
+    maxAdditionAnimalCount: 3
     playerCharacterPrefab: {fileID: 6755332979081973833, guid: e4f0f912049f8d544a9d3883221557c5, type: 3}
     animalFollowingCharacterPrefab: {fileID: 2963651658641981527, guid: 3ebadfdb4f1cd2d4a8a4226049efd44e, type: 3}
 --- !u!114 &148524059
