@@ -18,6 +18,9 @@ namespace DI
             Container.Bind(typeof(IInitializable),typeof(IDisposable), typeof(AnimalMiniGameController)).To<AnimalMiniGameController>().AsSingle().WithArguments(_miniGameSettings).NonLazy();
             Container.Bind<HudScoreCount>().FromInstance(_hudScoreCount).AsSingle();
             Container.Bind<ViewPool>().AsSingle().WithArguments(Container);
+            CoroutineHolder coroutineHolder = new GameObject("CoroutineHolder").AddComponent<CoroutineHolder>();
+            Container.Bind<CoroutineHolder>().FromInstance(coroutineHolder).AsSingle().WithArguments(Container);
+            
         }
     }
 }
