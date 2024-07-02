@@ -4,32 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f95de3c0-e906-4397-840c-e960424748c8" name="Changes" comment="" />
+    <list default="true" id="f95de3c0-e906-4397-840c-e960424748c8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AnimalCollecting/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AnimalCollecting/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/AnimalFieldScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/AnimalFieldScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AnimalMinigameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AnimalMiniGameController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AnimalMinigameController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Character/PlayerCharacter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Character/PlayerCharacter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/HudScoreCount.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/HudScoreCount.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/56073df97ede4f769c2cc45d546d986d172200/83/2670daf9/Rect.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/56073df97ede4f769c2cc45d546d986d172200/f5/3f014d03/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/bf6080dbf0564cf1b405dfd6e0dac725940e00/e4/ea69385c/Editor.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://G:/Git/AnimalCollecting/Assets/Scripts/Character/AnimalFollowingCharacter.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://G:/Git/AnimalCollecting/Assets/Scripts/Character/AnimalFollowingCharacter.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://G:/Git/AnimalCollecting/Assets/Scripts/Character/AnimalFollowingCharacter.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://G:/Git/AnimalCollecting/Assets/Scripts/Character/AnimalFollowingCharacter.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://G:/Git/AnimalCollecting/Assets/Scripts/Character/AnimalFollowingCharacter.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/Base/ICharacter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DI/LevelInstaller.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="2iYCZIEXRgOnQ5IWgzTA0f5JOVl" />
   <component name="ProjectViewState">
@@ -120,6 +115,7 @@
       <workItem from="1719658179102" duration="3723000" />
       <workItem from="1719838556420" duration="658000" />
       <workItem from="1719839229328" duration="34852000" />
+      <workItem from="1719879880567" duration="3082000" />
     </task>
     <servers />
   </component>
